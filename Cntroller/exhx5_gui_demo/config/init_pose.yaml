@@ -1,0 +1,31 @@
+# time parameter
+
+mov_time : 3.0		# movement time
+
+# target pose [deg] for online_walking_module
+
+tar_pose :
+
+  l_ank_pitch: 44.8829842297271
+  l_ank_roll: 0.511839116662706
+  l_hip_pitch: -44.8064660965445
+  l_hip_roll: 0.381405243527325
+  l_hip_yaw: 0.0204976583052224
+  l_knee: 90.3539635787993
+  r_ank_pitch: -45.0048692117143
+  r_ank_roll: 0.0264590047899285
+  r_hip_pitch: 44.9540214203512
+  r_hip_roll: -0.994772131231879
+  r_hip_yaw: -0.0347392731033493
+  r_knee: -90.6547211810173
+  r_sho_pitch: 0
+
+
+
+
+
+
+
+
+
+

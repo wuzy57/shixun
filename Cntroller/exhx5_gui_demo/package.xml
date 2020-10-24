@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>exhx5_gui_demo</name>
+  <version>0.1.0</version>
+  <description>
+    The exhx5_gui_demo is a GUI software to control EXHX5. Within this program, user can perform module settings, walking tuner, head joint control and play actions.
+  </description>
+  <license>Apache 2.0</license>
+  <author email="dm@todo.com">todo</author>
+  <maintainer email="dm@todo.com">todo</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>op3_gui_demo</depend>
+  <!--exec_depend>op3_gui_demo</exec_depend-->
+</package>

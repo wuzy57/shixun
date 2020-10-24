@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>exhx5_online_walking_module</name>
+  <version>0.1.0</version>
+  <description>
+    The exhx5_online_walking_module package
+  </description>
+  <license>Apache 2.0</license>
+  <author email="dm@todo.com">todo</author>
+  <maintainer email="dm@todo.com">todo</maintainer>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>roslib</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>robotis_controller_msgs</depend>
+  <depend>op3_online_walking_module_msgs</depend>
+  <depend>cmake_modules</depend>
+  <depend>orocos_kdl</depend>
+  <depend>robotis_framework_common</depend>
+  <depend>robotis_device</depend>
+  <depend>robotis_math</depend>
+  <depend>exhx5_balance_control</depend>
+  <depend>boost</depend>
+  <depend>eigen</depend>
+  <depend>yaml-cpp</depend>
+</package>

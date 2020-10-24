@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<launch>    
+    <param name="gazebo"                   value="true"    type="bool"/>
+    <param name="gazebo_robot_name"        value="exhx5"/>
+    
+    <param name="offset_file_path"         value="$(find exhx5_manager)/config/offset_gazebo.yaml"/>
+    <param name="robot_file_path"          value="$(find exhx5_manager)/config/exhx5_wheel.robot"/>
+    <param name="init_file_path"           value="$(find exhx5_manager)/config/dxl_init.yaml"/>
+    <param name="device_name"              value="/dev/ttyUSB0"/>
+    
+    <param name="action_file_path"         value="$(find exhx5_manager)/config/motion_4095.bin" />
+    <param name="init_pose_file_path"      value="$(find exhx5_manager)/config/ini_pose_wheel.yaml" />
+
+    <!-- exhx5 Manager -->
+    <node pkg="exhx5_manager" type="exhx5_manager" name="exhx5_manager" output="screen"/>
+</launch>

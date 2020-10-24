@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<launch>    
+    <param name="gazebo"                   value="true"    type="bool"/>
+    <param name="gazebo_robot_name"        value="exhx5"/>
+    
+    <param name="offset_file_path"         value="$(find exhx5_manager)/config/offset_gazebo_wing_1.yaml"/>
+    <param name="robot_file_path"          value="$(find exhx5_manager)/config/exhx5_wing_1.robot"/>
+    <param name="init_file_path"           value="$(find exhx5_manager)/config/dxl_init_wing_1.yaml"/>
+    <param name="device_name"              value="/dev/ttyUSB0"/>
+    
+    <param name="action_file_path"         value="$(find exhx5_manager)/config/motion_4095.bin" />
+    <param name="init_pose_file_path"      value="$(find exhx5_manager)/config/ini_pose_exhx5_wing_1.yaml" />
+
+    <!-- exhx5 Manager -->
+    <node pkg="exhx5_manager" type="exhx5_manager" name="exhx5_manager" output="screen">
+      <remap from="/exhx5/l_sho_pitch_position/command" to="/exhx5/l_hip_yaw_position/command" />
+      <remap from="/exhx5/l_sho_pitch_velocity/command" to="/exhx5/l_hip_yaw_velocity/command" />
+      <remap from="/exhx5/l_sho_pitch_effort/command" to="/exhx5/l_hip_yaw_effort/command" />
+      <remap from="/exhx5/r_sho_pitch_position/command" to="/exhx5/r_hip_yaw_position/command" />
+      <remap from="/exhx5/r_sho_pitch_velocity/command" to="/exhx5/r_hip_yaw_velocity/command" />
+      <remap from="/exhx5/r_sho_pitch_effort/command" to="/exhx5/r_hip_yaw_effort/command" />
+    </node>
+</launch>

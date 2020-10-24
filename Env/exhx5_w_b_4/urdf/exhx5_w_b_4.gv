@@ -1,0 +1,41 @@
+digraph G {
+node [shape=box];
+"body_link" [label="body_link"];
+"l_hip_yaw_link" [label="l_hip_yaw_link"];
+"l_hip_roll_link" [label="l_hip_roll_link"];
+"l_hip_pitch_link" [label="l_hip_pitch_link"];
+"l_knee_link" [label="l_knee_link"];
+"l_ank_pitch_link" [label="l_ank_pitch_link"];
+"l_ank_roll_link" [label="l_ank_roll_link"];
+"r_hip_yaw_link" [label="r_hip_yaw_link"];
+"r_hip_roll_link" [label="r_hip_roll_link"];
+"r_hip_pitch_link" [label="r_hip_pitch_link"];
+"r_knee_link" [label="r_knee_link"];
+"r_ank_pitch_link" [label="r_ank_pitch_link"];
+"r_ank_roll_link" [label="r_ank_roll_link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"body_link" -> "l_hip_yaw" [label="xyz: 0 0.045 0 \nrpy: -3.14159 -4.23516e-22 1.5708"]
+"l_hip_yaw" -> "l_hip_yaw_link"
+"l_hip_yaw_link" -> "l_hip_roll" [label="xyz: 0 0 0 \nrpy: 0 -1.5708 1.5708"]
+"l_hip_roll" -> "l_hip_roll_link"
+"l_hip_roll_link" -> "l_hip_pitch" [label="xyz: 0 0 0 \nrpy: 1.5708 -0 0"]
+"l_hip_pitch" -> "l_hip_pitch_link"
+"l_hip_pitch_link" -> "l_knee" [label="xyz: 0.075954 0 0 \nrpy: 0 -0 0"]
+"l_knee" -> "l_knee_link"
+"l_knee_link" -> "l_ank_pitch" [label="xyz: 0.074602 0 0 \nrpy: -3.14159 -0 0"]
+"l_ank_pitch" -> "l_ank_pitch_link"
+"l_ank_pitch_link" -> "l_ank_roll" [label="xyz: 0.0465 0 0 \nrpy: -1.5708 0 0"]
+"l_ank_roll" -> "l_ank_roll_link"
+"body_link" -> "r_hip_yaw" [label="xyz: 0 -0.045 0 \nrpy: 3.14159 4.23516e-22 1.5708"]
+"r_hip_yaw" -> "r_hip_yaw_link"
+"r_hip_yaw_link" -> "r_hip_roll" [label="xyz: 0 0 0 \nrpy: 0 -1.5708 1.5708"]
+"r_hip_roll" -> "r_hip_roll_link"
+"r_hip_roll_link" -> "r_hip_pitch" [label="xyz: 0 0 0 \nrpy: -1.5708 0 0"]
+"r_hip_pitch" -> "r_hip_pitch_link"
+"r_hip_pitch_link" -> "r_knee" [label="xyz: 0.075954 0 0 \nrpy: 0 -0 0"]
+"r_knee" -> "r_knee_link"
+"r_knee_link" -> "r_ank_pitch" [label="xyz: 0.074602 0 0 \nrpy: -3.14159 -0 0"]
+"r_ank_pitch" -> "r_ank_pitch_link"
+"r_ank_pitch_link" -> "r_ank_roll" [label="xyz: 0.0465 0 0 \nrpy: 1.5708 -0 0"]
+"r_ank_roll" -> "r_ank_roll_link"
+}

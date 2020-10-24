@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="args" default=""/>
+  <param name="gui_config" value="$(find exhx5_gui_demo)/config/gui_config.yaml"/>
+  <param name="gui_motion" value="$(find exhx5_gui_demo)/config/gui_motion.yaml"/>
+  <param name="ini_pose_path" value="$(find exhx5_gui_demo)/config/init_pose.yaml"/>
+
+  <node pkg="op3_gui_demo" type="op3_gui_demo" name="exhx5_demo_opc" output="screen" args="$(arg args)">
+    <remap from="/exhx5_demo/ik_target_pose" to="/pose_panel/pose" />
+  </node>
+</launch>

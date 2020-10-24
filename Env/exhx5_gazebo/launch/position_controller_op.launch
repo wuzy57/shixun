@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<launch>
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find exhx5_gazebo)/config/position_controller_op.yaml" command="load"/>
+
+  <!-- load the controllers -->
+<!--
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+  output="screen" ns="/robotis_op3" args="joint_state_controller
+                                          head_pan_position
+                                          head_tilt_position" />
+-->
+
+  <node pkg="controller_manager" type="spawner" name="controller_spawner" respawn="false"
+  output="screen" ns="/exhx5" args="j_pan_position_controller j_tilt_position_controller j_camboard_position_controller j_pelvis_l_position_controller j_thigh1_l_position_controller j_thigh2_l_position_controller j_tibia_l_position_controller j_ankle1_l_position_controller j_ankle2_l_position_controller j_pelvis_r_position_controller j_thigh1_r_position_controller j_thigh2_r_position_controller j_tibia_r_position_controller j_ankle1_r_position_controller j_ankle2_r_position_controller joint_state_controller" />
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+	respawn="false" output="screen">
+    <remap from="/joint_states" to="/exhx5/joint_states" />
+  </node>
+
+</launch>

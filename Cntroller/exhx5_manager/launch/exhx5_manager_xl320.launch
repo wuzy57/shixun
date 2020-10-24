@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<launch>    
+    <param name="gazebo"                   value="false"    type="bool"/>
+    <param name="gazebo_robot_name"        value="exhx5"/>
+    
+    <param name="offset_file_path"         value="$(find exhx5_manager)/config/offset.yaml"/>
+    <param name="robot_file_path"          value="$(find exhx5_manager)/config/exhx5_XL320.robot"/>
+    <param name="init_file_path"           value="$(find exhx5_manager)/config/dxl_init_XL320.yaml"/>
+    <param name="device_name"              value="/dev/ttyUSB0"/>
+    
+    <param name="action_file_path"         value="$(find exhx5_manager)/config/motion_4095.bin" />
+    <param name="init_pose_file_path"      value="$(find exhx5_manager)/config/ini_pose_XL-320.yaml" />
+    
+    <!-- exhx5 Manager -->
+    <node pkg="exhx5_manager" type="exhx5_manager" name="exhx5_manager" output="screen">
+	    <param name="angle_unit" value="30" />
+	  </node>
+
+    <!-- OP3 Localization -->
+    <node pkg="op3_localization" type="op3_localization" name="op3_localization" output="screen"/>
+</launch>

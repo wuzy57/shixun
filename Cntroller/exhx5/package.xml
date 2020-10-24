@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>exhx5</name>
+  <version>0.1.0</version>
+  <description>
+    ROS packages for the exhx5 (meta package)
+  </description>
+  <license>Apache 2.0</license>
+  <author email="dm@todo.com">todo</author>
+  <maintainer email="dm@todo.com">todo</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>cm_740_module</exec_depend>
+  <exec_depend>exhx5_gui_demo</exec_depend>
+  <exec_depend>exhx5_kinematics_dynamics</exec_depend>
+  <exec_depend>exhx5_manager</exec_depend>
+  <exec_depend>exhx5_walking_module</exec_depend>
+  <exec_depend>open_cr_module</exec_depend>
+  <export><metapackage/></export>
+</package>
